@@ -90,10 +90,11 @@ def predict():
 
         # print(prediction)
 
-        if(prediction=="N"):
-            prediction="No"
-        else:
+        if(prediction==1):
             prediction="Yes"
+        
+        if(prediction==0):
+            prediction="NO"
 
 
         return render_template("prediction.html", prediction_text="loan status is {}".format(prediction))
