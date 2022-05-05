@@ -8,7 +8,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("prediction.html")
 
 
 @app.route('/predict', methods=['GET', 'POST'])
@@ -97,7 +97,7 @@ def predict():
             prediction="NO"
 
 
-        return render_template("prediction.html", prediction_text="loan status is {}".format(prediction))
+        return render_template("prediction.html", prediction_text="Loan Status is {}".format(prediction))
 
 
 
