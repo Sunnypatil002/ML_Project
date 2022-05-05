@@ -88,7 +88,7 @@ def predict():
 
         prediction = model.predict([[credit, ApplicantIncomelog,LoanAmountlog, Loan_Amount_Termlog, totalincomelog, male, married_yes, dependents_1, dependents_2, dependents_3, not_graduate, employed_yes,semiurban, urban ]])
 
-        # print(prediction)
+        print(prediction)
 
         if(prediction==1):
             prediction="Yes"
